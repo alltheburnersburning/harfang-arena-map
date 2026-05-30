@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:transparent;font-family:sans-serif}
+.wrap{background:#0a1628;border-radius:16px;padding:18px 16px 14px;max-width:720px;margin:0 auto}
+.title{text-align:center;font-size:15px;font-weight:600;color:#8ab8e8;letter-spacing:.12em;text-transform:uppercase;margin-bottom:2px}
+.sub{text-align:center;font-size:10px;color:#3a5070;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+.legend{display:grid;grid-template-columns:repeat(3,1fr);gap:5px 10px;margin:12px 6px 0}
+.leg{display:flex;align-items:center;gap:7px;font-size:10px;color:#8aa0b8;padding:4px 6px;border-radius:6px;cursor:pointer;border:1px solid transparent;transition:all .15s}
+.leg:hover{background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1)}
+.leg.on{background:rgba(255,255,255,0.09);border-color:rgba(255,255,255,0.2);color:#e0eaf8}
+.swatch{width:12px;height:12px;border-radius:3px;flex-shrink:0}
+.leg small{color:#3a5070;font-size:9px;display:block;margin-top:1px}
+.cap-row{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px 14px;margin:10px 6px 0;padding:7px 10px;background:rgba(255,255,255,0.03);border-radius:8px;border:1px solid rgba(255,255,255,0.05);font-size:10px;color:#3a5070}
+.cap-row b{color:#b0c8e0}
+.cap-total{font-size:13px;font-weight:600;color:#e0eaf8}
+.dot{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,0.12)}
+.tt{position:fixed;background:rgba(6,12,24,.97);border:1px solid rgba(138,184,232,.3);border-radius:10px;padding:9px 13px;font-size:11.5px;color:#c0d8f0;pointer-events:none;z-index:9999;display:none;max-width:200px;line-height:1.5}
+.tt-name{font-weight:600;font-size:13px;margin-bottom:3px;color:#e0f0ff}
+.tt-price{color:#6a9fc0;font-size:10.5px;margin-bottom:2px}
+.tt-desc{color:#3a5060;font-size:10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="title">Harfang Desjardins Arena</div>
+  <div class="sub">Official Seating Chart · Québec Harfangs ANBA · Capacity 19,500</div>
+
+<svg width="100%" viewBox="0 0 720 560" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <radialGradient id="courtglow" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#1a3a1a" stop-opacity="0.5"/>
+    <stop offset="100%" stop-color="#0d1e0d" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+
+<!-- Arena outer shell -->
+<ellipse cx="360" cy="282" rx="330" ry="258" fill="#0e1c30" stroke="#162540" stroke-width="2"/>
+
+<!-- ═══ UPPER BOWL (400 level) — navy #1a3560 ═══ -->
+<!-- Top arc 401-412 -->
+<path d="M88,148 L118,118 L148,104 L180,96 L210,90 L360,84 L510,90 L540,96 L572,104 L602,118 L632,148
+         L596,158 L566,144 L538,134 L508,126 L476,120 L360,114 L244,120 L212,126 L182,134 L154,144 Z"
+  fill="#1a3560" stroke="#0a1628" stroke-width="1.2" class="sec"
+  data-s="401–412" data-t="Upper Bowl" data-p="$55–$110/seat" data-d="Top arc · Ends &amp; sides · 400 level"/>
+
+<!-- Left side 421-422 -->
+<path d="M58,176 L88,148 L96,170 L96,210 L96,252 L96,282 L96,312 L88,334 L58,310 L50,282 L50,228 Z"
+  fill="#1a3560" stroke="#0a1628" stroke-width="1.2" class="sec"
+  data-s="421–422" data-t="Upper Bowl" data-p="$45–$75/seat" data-d="West sideline · Upper level"/>
+
+<!-- Right side 423-424 -->
+<path d="M662,176 L632,148 L624,170 L624,210 L624,252 L624,282 L624,312 L632,334 L662,310 L670,282 L670,228 Z"
+  fill="#1a3560" stroke="#0a1628" stroke-width="1.2" class="sec"
+  data-s="423–424" data-t="Upper Bowl" data-p="$45–$75/seat" data-d="East sideline · Upper level"/>
+
+<!-- Bottom arc 413-420 -->
+<path d="M88,416 L118,446 L148,460 L180,468 L210,474 L360,480 L510,474 L540,468 L572,460 L602,446 L632,416
+         L596,406 L566,420 L538,430 L508,438 L476,444 L360,450 L244,444 L212,438 L182,430 L154,420 Z"
+  fill="#1a3560" stroke="#0a1628" stroke-width="1.2" class="sec"
+  data-s="413–420" data-t="Upper Bowl" data-p="$55–$110/seat" data-d="Bottom arc · Ends &amp; sides · 400 level"/>
+
+<!-- ═══ LUXURY SUITES — gold ═══ -->
+<!-- Top row suites -->
+<rect x="154" y="108" width="44" height="20" rx="4" fill="#b8920a" stroke="#7a6008" stroke-width="1" class="sec"
+  data-s="Suites 1–4" data-t="Luxury Suite" data-p="$5,000–$12,000/game" data-d="End view · Private bar · 18–22 seats · IOA Suite Level"/>
+<rect x="214" y="96" width="58" height="20" rx="4" fill="#c8a010" stroke="#7a6008" stroke-width="1" class="sec"
+  data-s="Suites 5–8" data-t="Luxury Suite" data-p="$6,000–$14,000/game" data-d="Corner · Premium catering · Desjardins Suite Level"/>
+<rect x="290" y="88" width="70" height="20" rx="4" fill="#d4b020" stroke="#7a6008" stroke-width="1" class="sec"
+  data-s="Suites 9–13" data-t="Luxury Suite" data-p="$8,000–$18,000/game" data-d="Mid-court · Best sightlines · Verizon Loft style"/>
+<rect x="362" y="86" width="70" height="20" rx="4" fill="#d4b020" stroke="#7a6008" stroke-width="1" class="sec"
+  data-s="Suites 14–18" data-t="Luxury Suite" data-p="$8,000–$18,000/game" data-d="Mid-court · Best sightlines · Verizon Loft style"/>
+<rect x="450" y="88" width="58" height="20" rx="4" fill="#c8a010" stroke="#7a6008" stroke-width="1" class="sec"
+  data-s="Suites 19–22" data-t="Luxury Suite" data-p="$6,000–$14,000/game" data-d="Corner · Premium catering"/>
+<rect x="522" y="100" width="44" height="20" rx="4" fill="#b8920a" stroke="#7a6008" stroke-width="1" class="sec"
+  data-s="Suites 23–26" data-t="Luxury Suite" data-p="$5,000–$12,000/game" data-d="End view · Private bar"/>
+<!-- Bottom row suites -->
+<rect x="154" y="432" width="44" height="20" rx="4" fill="#b8920a" stroke="#7a6008" stroke-width="1" class="sec"
+  data-s="Suites 27–30" data-t="Luxury Suite" data-p="$5,000–$12,000/game" data-d="South end · Private bar"/>
+<rect x="214" y="444" width="58" height="20" rx="4" fill="#c8a010" stroke="#7a6008" stroke-width="1" class="sec"
+  data-s="Suites 31–34" data-t="Luxury Suite" data-p="$6,000–$14,000/game" data-d="Corner · Premium catering"/>
+<rect x="290" y="452" width="70" height="20" rx="4" fill="#d4b020" stroke="#7a6008" stroke-width="1" class="sec"
+  data-s="Suites 35–39" data-t="Luxury Suite" data-p="$8,000–$18,000/game" data-d="Mid-court · Best sightlines"/>
+<rect x="362" y="452" width="70" height="20" rx="4" fill="#d4b020" stroke="#7a6008" stroke-width="1" class="sec"
+  data-s="Suites 40–44" data-t="Luxury Suite" data-p="$8,000–$18,000/game" data-d="Mid-court · Best sightlines"/>
+<rect x="450" y="444" width="58" height="20" rx="4" fill="#c8a010" stroke="#7a6008" stroke-width="1" class="sec"
+  data-s="Suites 45–48" data-t="Luxury Suite" data-p="$6,000–$14,000/game" data-d="Corner · Premium catering"/>
+<rect x="522" y="432" width="44" height="20" rx="4" fill="#b8920a" stroke="#7a6008" stroke-width="1" class="sec"
+  data-s="Suites 49–52" data-t="Luxury Suite" data-p="$5,000–$12,000/game" data-d="South end · Private bar"/>
+
+<!-- ═══ CLUB LEVEL (200 level) — purple ═══ -->
+<!-- Top club 201-212 -->
+<path d="M154,130 L180,120 L210,114 L360,108 L510,114 L540,120 L566,130 L540,140 L510,132 L476,128 L360,122 L244,128 L210,132 L180,140 Z"
+  fill="#4a1e80" stroke="#0a1628" stroke-width="1.1" class="sec"
+  data-s="201–212" data-t="Club Level" data-p="$150–$310/seat" data-d="Top arc · Padded seats · In-seat service · Caisse Desjardins Lounge access"/>
+
+<!-- Left club 221-224 -->
+<path d="M110,168 L140,146 L148,168 L148,210 L148,252 L148,282 L148,312 L140,332 L110,314 L104,282 L104,228 Z"
+  fill="#4a1e80" stroke="#0a1628" stroke-width="1.1" class="sec"
+  data-s="221–224" data-t="Club Level" data-p="$130–$220/seat" data-d="West sideline club · Padded seats · Lounge access"/>
+
+<!-- Right club 225-226 -->
+<path d="M610,168 L580,146 L572,168 L572,210 L572,252 L572,282 L572,312 L580,332 L610,314 L616,282 L616,228 Z"
+  fill="#4a1e80" stroke="#0a1628" stroke-width="1.1" class="sec"
+  data-s="225–226" data-t="Club Level" data-p="$130–$220/seat" data-d="East sideline club · Padded seats · Lounge access"/>
+
+<!-- Bottom club 213-220 -->
+<path d="M154,430 L180,442 L210,448 L360,454 L510,448 L540,442 L566,430 L540,420 L510,428 L476,432 L360,438 L244,432 L210,428 L180,420 Z"
+  fill="#4a1e80" stroke="#0a1628" stroke-width="1.1" class="sec"
+  data-s="213–220" data-t="Club Level" data-p="$150–$310/seat" data-d="Bottom arc club · Padded seats · In-seat service"/>
+
+<!-- ═══ LOWER BOWL (100 level) — red-orange ═══ -->
+<!-- Top lower 101-112 -->
+<path d="M180,152 L210,142 L244,138 L360,132 L476,138 L510,142 L540,152 L510,164 L476,156 L360,150 L244,156 L210,164 Z"
+  fill="#8c2a14" stroke="#0a1628" stroke-width="1.1" class="sec"
+  data-s="101–112" data-t="Lower Bowl" data-p="$80–$260/seat" data-d="Top arc · 100 level · Reserved seating"/>
+
+<!-- Left lower 123-124 -->
+<path d="M150,178 L180,160 L188,180 L188,220 L188,252 L188,282 L188,312 L180,332 L150,316 L144,282 L144,228 Z"
+  fill="#8c2a14" stroke="#0a1628" stroke-width="1.1" class="sec"
+  data-s="123–124" data-t="Lower Bowl" data-p="$80–$200/seat" data-d="West sideline · 100 level"/>
+
+<!-- Right lower 129-130 -->
+<path d="M570,178 L540,160 L532,180 L532,220 L532,252 L532,282 L532,312 L540,332 L570,316 L576,282 L576,228 Z"
+  fill="#8c2a14" stroke="#0a1628" stroke-width="1.1" class="sec"
+  data-s="129–130" data-t="Lower Bowl" data-p="$80–$200/seat" data-d="East sideline · 100 level"/>
+
+<!-- Bottom lower 113-122 -->
+<path d="M180,412 L210,422 L244,426 L360,432 L476,426 L510,422 L540,412 L510,400 L476,408 L360,414 L244,408 L210,400 Z"
+  fill="#8c2a14" stroke="#0a1628" stroke-width="1.1" class="sec"
+  data-s="113–122" data-t="Lower Bowl" data-p="$80–$260/seat" data-d="Bottom arc · 100 level · Reserved seating"/>
+
+<!-- ═══ COURTSIDE — green ═══ -->
+<!-- Top courtside CS-1 to CS-4 -->
+<path d="M200,170 L240,160 L360,154 L480,160 L520,170 L480,182 L360,176 L240,182 Z"
+  fill="#145a2a" stroke="#0a1628" stroke-width="1" class="sec"
+  data-s="CS-1 to CS-4" data-t="Courtside" data-p="$380–$850/seat" data-d="North end · Floor level · 8ft from sideline · PSL required"/>
+
+<!-- Bottom courtside CS-9 to CS-12 -->
+<path d="M200,394 L240,382 L360,376 L480,382 L520,394 L480,402 L360,408 L240,402 Z"
+  fill="#145a2a" stroke="#0a1628" stroke-width="1" class="sec"
+  data-s="CS-9 to CS-12" data-t="Courtside" data-p="$380–$850/seat" data-d="South end · Floor level · 8ft from sideline · PSL required"/>
+
+<!-- Left courtside CS-5 to CS-8 -->
+<path d="M196,186 L212,196 L212,254 L212,282 L212,310 L196,320 L180,312 L180,252 L180,210 Z"
+  fill="#145a2a" stroke="#0a1628" stroke-width="1" class="sec"
+  data-s="CS-5 to CS-8" data-t="Courtside" data-p="$500–$850/seat" data-d="West sideline floor · Closest to players"/>
+
+<!-- Right courtside CS-13 to CS-16 -->
+<path d="M524,186 L508,196 L508,254 L508,282 L508,310 L524,320 L540,312 L540,252 L540,210 Z"
+  fill="#145a2a" stroke="#0a1628" stroke-width="1" class="sec"
+  data-s="CS-13 to CS-16" data-t="Courtside" data-p="$500–$850/seat" data-d="East sideline floor · Closest to players"/>
+
+<!-- ═══ BASKETBALL COURT ═══ -->
+<rect x="216" y="190" width="288" height="184" rx="6" fill="#c8841a" stroke="#a06010" stroke-width="1.5"/>
+<!-- Court markings -->
+<rect x="216" y="190" width="288" height="184" rx="6" fill="none" stroke="#d09030" stroke-width="1"/>
+<!-- Centre circle -->
+<circle cx="360" cy="282" r="28" fill="none" stroke="#d09030" stroke-width="1.2"/>
+<!-- Centre line -->
+<line x1="216" y1="282" x2="504" y2="282" stroke="#d09030" stroke-width="1"/>
+<!-- Three point arcs -->
+<path d="M246,198 Q216,282 246,366" fill="none" stroke="#d09030" stroke-width="1"/>
+<path d="M474,198 Q504,282 474,366" fill="none" stroke="#d09030" stroke-width="1"/>
+<!-- Paint left -->
+<rect x="216" y="246" width="70" height="72" fill="none" stroke="#d09030" stroke-width="1"/>
+<!-- Paint right -->
+<rect x="434" y="246" width="70" height="72" fill="none" stroke="#d09030" stroke-width="1"/>
+<!-- Free throw circles -->
+<path d="M286,246 Q256,282 286,318" fill="none" stroke="#d09030" stroke-width="1"/>
+<path d="M434,246 Q464,282 434,318" fill="none" stroke="#d09030" stroke-width="1"/>
+
+<!-- Harfangs logo text on court -->
+<text x="360" y="272" text-anchor="middle" fill="#e8a030" font-size="11" font-family="sans-serif" font-weight="700" opacity="0.8">QUÉBEC</text>
+<text x="360" y="286" text-anchor="middle" fill="#e8a030" font-size="9" font-family="sans-serif" font-weight="600" opacity="0.6">HARFANGS</text>
+
+<!-- Benches -->
+<rect x="278" y="188" width="60" height="8" rx="2" fill="#0d2010" stroke="#1a4020" stroke-width="0.7"/>
+<text x="308" y="195" text-anchor="middle" fill="#1a6030" font-size="5" font-family="sans-serif">HOME BENCH</text>
+<rect x="382" y="188" width="60" height="8" rx="2" fill="#200d0d" stroke="#401a1a" stroke-width="0.7"/>
+<text x="412" y="195" text-anchor="middle" fill="#803030" font-size="5" font-family="sans-serif">AWAY BENCH</text>
+
+<!-- ═══ SECTION LABELS ═══ -->
+<!-- Upper bowl -->
+<text x="360" y="104" text-anchor="middle" fill="#3a5888" font-size="7.5" font-family="sans-serif">401–412</text>
+<text x="360" y="468" text-anchor="middle" fill="#3a5888" font-size="7.5" font-family="sans-serif">413–420</text>
+<text x="68" y="286" text-anchor="middle" fill="#3a5888" font-size="7" font-family="sans-serif">421–422</text>
+<text x="648" y="286" text-anchor="middle" fill="#3a5888" font-size="7" font-family="sans-serif">423–424</text>
+
+<!-- Suite labels -->
+<text x="176" y="121" text-anchor="middle" fill="#c8a020" font-size="6.5" font-family="sans-serif" font-weight="600">S1–4</text>
+<text x="243" y="109" text-anchor="middle" fill="#c8a020" font-size="6.5" font-family="sans-serif" font-weight="600">S5–8</text>
+<text x="325" y="101" text-anchor="middle" fill="#c8a020" font-size="6.5" font-family="sans-serif" font-weight="600">S9–13</text>
+<text x="397" y="99" text-anchor="middle" fill="#c8a020" font-size="6.5" font-family="sans-serif" font-weight="600">S14–18</text>
+<text x="479" y="101" text-anchor="middle" fill="#c8a020" font-size="6.5" font-family="sans-serif" font-weight="600">S19–22</text>
+<text x="544" y="113" text-anchor="middle" fill="#c8a020" font-size="6.5" font-family="sans-serif" font-weight="600">S23–26</text>
+<text x="176" y="445" text-anchor="middle" fill="#c8a020" font-size="6.5" font-family="sans-serif" font-weight="600">S27–30</text>
+<text x="243" y="457" text-anchor="middle" fill="#c8a020" font-size="6.5" font-family="sans-serif" font-weight="600">S31–34</text>
+<text x="325" y="465" text-anchor="middle" fill="#c8a020" font-size="6.5" font-family="sans-serif" font-weight="600">S35–39</text>
+<text x="397" y="465" text-anchor="middle" fill="#c8a020" font-size="6.5" font-family="sans-serif" font-weight="600">S40–44</text>
+<text x="479" y="457" text-anchor="middle" fill="#c8a020" font-size="6.5" font-family="sans-serif" font-weight="600">S45–48</text>
+<text x="544" y="445" text-anchor="middle" fill="#c8a020" font-size="6.5" font-family="sans-serif" font-weight="600">S49–52</text>
+
+<!-- Club labels -->
+<text x="360" y="134" text-anchor="middle" fill="#9060d0" font-size="7.5" font-family="sans-serif">201–212</text>
+<text x="360" y="448" text-anchor="middle" fill="#9060d0" font-size="7.5" font-family="sans-serif">213–220</text>
+<text x="126" y="250" text-anchor="middle" fill="#9060d0" font-size="7" font-family="sans-serif">221</text>
+<text x="126" y="310" text-anchor="middle" fill="#9060d0" font-size="7" font-family="sans-serif">222</text>
+<text x="594" y="250" text-anchor="middle" fill="#9060d0" font-size="7" font-family="sans-serif">225</text>
+<text x="594" y="310" text-anchor="middle" fill="#9060d0" font-size="7" font-family="sans-serif">226</text>
+
+<!-- Lower bowl labels -->
+<text x="360" y="150" text-anchor="middle" fill="#d06040" font-size="7.5" font-family="sans-serif">101–112</text>
+<text x="360" y="428" text-anchor="middle" fill="#d06040" font-size="7.5" font-family="sans-serif">113–122</text>
+<text x="165" y="252" text-anchor="middle" fill="#d06040" font-size="7" font-family="sans-serif">123</text>
+<text x="165" y="312" text-anchor="middle" fill="#d06040" font-size="7" font-family="sans-serif">124</text>
+<text x="555" y="252" text-anchor="middle" fill="#d06040" font-size="7" font-family="sans-serif">129</text>
+<text x="555" y="312" text-anchor="middle" fill="#d06040" font-size="7" font-family="sans-serif">130</text>
+
+<!-- Courtside labels -->
+<text x="360" y="172" text-anchor="middle" fill="#30a858" font-size="7" font-family="sans-serif">CS-1 / CS-4</text>
+<text x="360" y="400" text-anchor="middle" fill="#30a858" font-size="7" font-family="sans-serif">CS-9 / CS-12</text>
+<text x="196" y="270" text-anchor="middle" fill="#30a858" font-size="6.5" font-family="sans-serif">CS-5</text>
+<text x="196" y="296" text-anchor="middle" fill="#30a858" font-size="6.5" font-family="sans-serif">CS-8</text>
+<text x="524" y="270" text-anchor="middle" fill="#30a858" font-size="6.5" font-family="sans-serif">CS-13</text>
+<text x="524" y="296" text-anchor="middle" fill="#30a858" font-size="6.5" font-family="sans-serif">CS-16</text>
+
+<!-- ═══ SPONSORED ZONES ═══ -->
+<!-- Bell Zone (west) -->
+<rect x="34" y="258" width="36" height="28" rx="5" fill="rgba(10,22,50,0.85)" stroke="rgba(60,100,180,0.4)" stroke-width="0.8"/>
+<text x="52" y="269" text-anchor="middle" fill="#2a60c0" font-size="7" font-family="sans-serif" font-weight="600">BELL</text>
+<text x="52" y="279" text-anchor="middle" fill="#2a60c0" font-size="7" font-family="sans-serif" font-weight="600">ZONE</text>
+
+<!-- RBC Zone (east) -->
+<rect x="650" y="258" width="36" height="28" rx="5" fill="rgba(10,22,50,0.85)" stroke="rgba(60,100,180,0.4)" stroke-width="0.8"/>
+<text x="668" y="269" text-anchor="middle" fill="#2a60c0" font-size="7" font-family="sans-serif" font-weight="600">RBC</text>
+<text x="668" y="279" text-anchor="middle" fill="#2a60c0" font-size="7" font-family="sans-serif" font-weight="600">ZONE</text>
+
+<!-- Videotron Family Zone badge -->
+<rect x="214" y="350" width="60" height="16" rx="3" fill="rgba(10,30,60,0.9)" stroke="rgba(30,120,200,0.5)" stroke-width="0.8"/>
+<text x="244" y="361" text-anchor="middle" fill="#2080c0" font-size="6" font-family="sans-serif" font-weight="600">VIDEOTRON FAMILY ZONE</text>
+
+<!-- Owl's Nest lounge badge (north) -->
+<rect x="296" y="68" width="128" height="14" rx="3" fill="rgba(80,40,160,0.4)" stroke="rgba(150,100,220,0.5)" stroke-width="0.8"/>
+<text x="360" y="78" text-anchor="middle" fill="#b080e8" font-size="6.5" font-family="sans-serif" font-weight="600">THE OWL'S NEST — MEMBERS LOUNGE</text>
+
+<!-- IOA Suite Level badge (south) -->
+<rect x="296" y="478" width="128" height="14" rx="3" fill="rgba(80,40,160,0.4)" stroke="rgba(150,100,220,0.5)" stroke-width="0.8"/>
+<text x="360" y="488" text-anchor="middle" fill="#b080e8" font-size="6.5" font-family="sans-serif" font-weight="600">DESJARDINS SUITE LEVEL</text>
+
+<!-- Diamond Crown Cigar Lounge (top left suite label) -->
+<rect x="72" y="110" width="76" height="22" rx="4" fill="rgba(40,20,8,0.85)" stroke="rgba(180,140,20,0.5)" stroke-width="0.8"/>
+<text x="110" y="119" text-anchor="middle" fill="#c8a020" font-size="6" font-family="sans-serif" font-weight="600">DESJARDINS</text>
+<text x="110" y="128" text-anchor="middle" fill="#c8a020" font-size="6" font-family="sans-serif">CROWN SUITES</text>
+<!-- connector line -->
+<line x1="148" y1="120" x2="158" y2="116" stroke="rgba(180,140,20,0.4)" stroke-width="0.7"/>
+
+<!-- Lexus Lounge style (top right) -->
+<rect x="574" y="110" width="76" height="22" rx="4" fill="rgba(40,20,8,0.85)" stroke="rgba(180,140,20,0.5)" stroke-width="0.8"/>
+<text x="612" y="119" text-anchor="middle" fill="#c8a020" font-size="6" font-family="sans-serif" font-weight="600">INTACT INSURANCE</text>
+<text x="612" y="128" text-anchor="middle" fill="#c8a020" font-size="6" font-family="sans-serif">PREMIUM SUITES</text>
+<line x1="574" y1="120" x2="566" y2="116" stroke="rgba(180,140,20,0.4)" stroke-width="0.7"/>
+
+<!-- Chase Club style (west) -->
+<rect x="18" y="370" width="68" height="22" rx="4" fill="rgba(10,20,50,0.9)" stroke="rgba(80,140,220,0.4)" stroke-width="0.8"/>
+<text x="52" y="379" text-anchor="middle" fill="#4a90e0" font-size="6" font-family="sans-serif" font-weight="600">CAISSE</text>
+<text x="52" y="388" text-anchor="middle" fill="#4a90e0" font-size="6" font-family="sans-serif">DESJARDINS CLUB</text>
+<line x1="86" y1="380" x2="100" y2="370" stroke="rgba(80,140,220,0.3)" stroke-width="0.7"/>
+
+<!-- North Party Suite style (east) -->
+<rect x="636" y="370" width="68" height="22" rx="4" fill="rgba(10,20,50,0.9)" stroke="rgba(80,140,220,0.4)" stroke-width="0.8"/>
+<text x="670" y="379" text-anchor="middle" fill="#4a90e0" font-size="6" font-family="sans-serif" font-weight="600">HARFANG</text>
+<text x="670" y="388" text-anchor="middle" fill="#4a90e0" font-size="6" font-family="sans-serif">PARTY SUITE</text>
+<line x1="636" y1="380" x2="622" y2="370" stroke="rgba(80,140,220,0.3)" stroke-width="0.7"/>
+
+<!-- Tampa Times Loft style (south) — National Bank Replay Zone -->
+<rect x="286" y="498" width="148" height="22" rx="4" fill="rgba(8,20,40,0.9)" stroke="rgba(60,120,200,0.4)" stroke-width="0.8"/>
+<text x="360" y="508" text-anchor="middle" fill="#3a80d0" font-size="6" font-family="sans-serif" font-weight="600">NATIONAL BANK</text>
+<text x="360" y="517" text-anchor="middle" fill="#3a80d0" font-size="6" font-family="sans-serif">REPLAY ZONE — SOUTH LOFT</text>
+
+<!-- Compass -->
+<text x="360" y="60" text-anchor="middle" fill="#203050" font-size="9" font-family="sans-serif" font-weight="600">N</text>
+<text x="360" y="544" text-anchor="middle" fill="#203050" font-size="9" font-family="sans-serif" font-weight="600">S</text>
+<text x="22" y="286" text-anchor="middle" fill="#203050" font-size="9" font-family="sans-serif" font-weight="600">W</text>
+<text x="698" y="286" text-anchor="middle" fill="#203050" font-size="9" font-family="sans-serif" font-weight="600">E</text>
+</svg>
+
+  <div class="legend">
+    <div class="leg" onclick="hl('cs',this)">
+      <div class="swatch" style="background:#145a2a;border:1px solid #30a858"></div>
+      <span>Courtside<br><small>$380–$850/seat · PSL req.</small></span>
+    </div>
+    <div class="leg" onclick="hl('lb',this)">
+      <div class="swatch" style="background:#8c2a14;border:1px solid #d06040"></div>
+      <span>Lower Bowl (100s)<br><small>$80–$260/seat</small></span>
+    </div>
+    <div class="leg" onclick="hl('su',this)">
+      <div class="swatch" style="background:#c8a010;border:1px solid #d4b820"></div>
+      <span>Luxury Suites<br><small>$5,000–$18,000/game</small></span>
+    </div>
+    <div class="leg" onclick="hl('cl',this)">
+      <div class="swatch" style="background:#4a1e80;border:1px solid #9060d0"></div>
+      <span>Club Level (200s)<br><small>$130–$310/seat</small></span>
+    </div>
+    <div class="leg" onclick="hl('ub',this)">
+      <div class="swatch" style="background:#1a3560;border:1px solid #3a5888"></div>
+      <span>Upper Bowl (400s)<br><small>$45–$110/seat</small></span>
+    </div>
+    <div class="leg" onclick="hl('all',this)" style="background:rgba(255,255,255,0.03);border-color:rgba(255,255,255,0.06)">
+      <div class="swatch" style="background:#203050;border:1px solid #304060"></div>
+      <span>Show all tiers</span>
+    </div>
+  </div>
+
+  <div class="cap-row">
+    <span>Courtside: <b>640</b></span><div class="dot"></div>
+    <span>Lower Bowl: <b>5,640</b></span><div class="dot"></div>
+    <span>Suites: <b>520</b></span><div class="dot"></div>
+    <span>Club Level: <b>3,480</b></span><div class="dot"></div>
+    <span>Upper Bowl: <b>9,220</b></span><div class="dot"></div>
+    <span class="cap-total">Total: 19,500</span>
+  </div>
+</div>
+
+<div class="tt" id="tt">
+  <div class="tt-name" id="tn"></div>
+  <div class="tt-price" id="tp"></div>
+  <div class="tt-desc" id="td"></div>
+</div>
+
+<script>
+const tt=document.getElementById('tt'),tn=document.getElementById('tn'),tp=document.getElementById('tp'),td=document.getElementById('td');
+document.querySelectorAll('.sec').forEach(el=>{
+  el.style.cursor='pointer';
+  el.style.transition='opacity .12s, filter .12s';
+  el.addEventListener('mouseenter',function(e){
+    tn.textContent=(this.dataset.t||'')+' — '+(this.dataset.s||'');
+    tp.textContent='Price: '+(this.dataset.p||'');
+    td.textContent=this.dataset.d||'';
+    tt.style.display='block';
+    this.style.filter='brightness(1.6)';
+  });
+  el.addEventListener('mousemove',function(e){
+    tt.style.left=(e.clientX+14)+'px';
+    tt.style.top=(e.clientY-44)+'px';
+  });
+  el.addEventListener('mouseleave',function(){
+    tt.style.display='none';
+    this.style.filter='';
+  });
+});
+function hl(t,btn){
+  const all=document.querySelectorAll('.sec');
+  const keys={cs:'Courtside',lb:'Lower Bowl',cl:'Club Level',su:'Luxury Suite',ub:'Upper Bowl'};
+  if(t==='all'){all.forEach(e=>{e.style.opacity='1';});}
+  else{const tgt=keys[t];all.forEach(e=>{e.style.opacity=e.dataset.t===tgt?'1':'0.1';});}
+  document.querySelectorAll('.leg').forEach(l=>l.classList.remove('on'));
+  btn.classList.add('on');
+}
+</script>
+</body>
+</html>
